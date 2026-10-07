@@ -1,96 +1,116 @@
 {
  "v": 1,
  "issue": 6,
+ "task": "roman",
  "run": [
   "python3",
-  "words.py"
+  "tasks/roman.py"
  ],
- "input": "text",
- "seed": 16,
+ "seed": 101,
  "cases": [
   {
-   "input": "",
-   "output": ""
+   "input": "4",
+   "output": "IV"
   },
   {
-   "input": " ",
-   "output": ""
+   "input": "1994",
+   "output": "MCMXCIV"
   },
   {
-   "input": "a",
-   "output": "a"
+   "input": "3999",
+   "output": "MMMCMXCIX"
   },
   {
-   "input": "A",
-   "output": "A"
+   "input": "1",
+   "output": "I"
   },
   {
-   "input": "Hello, World!",
-   "output": "World! Hello,"
+   "input": "3",
+   "output": "III"
   },
   {
-   "input": "  leading and trailing  ",
-   "output": "trailing and leading"
+   "input": "9",
+   "output": "IX"
   },
   {
-   "input": "a  b",
-   "output": "b a"
+   "input": "14",
+   "output": "XIV"
   },
   {
-   "input": "x-y_z",
-   "output": "x-y_z"
+   "input": "40",
+   "output": "XL"
   },
   {
-   "input": "100%",
-   "output": "100%"
+   "input": "90",
+   "output": "XC"
   },
   {
-   "input": "6iv9b4 b8p6/k csDZVe!fZ)O9,jDO",
-   "output": "csDZVe!fZ)O9,jDO b8p6/k 6iv9b4"
+   "input": "400",
+   "output": "CD"
   },
   {
-   "input": "ogY",
-   "output": "ogY"
+   "input": "444",
+   "output": "CDXLIV"
   },
   {
-   "input": "_3lxl7ke&ttuA1",
-   "output": "_3lxl7ke&ttuA1"
+   "input": "900",
+   "output": "CM"
   },
   {
-   "input": "ToZ",
-   "output": "ToZ"
+   "input": "2024",
+   "output": "MMXXIV"
   },
   {
-   "input": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS",
-   "output": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS"
+   "input": "3888",
+   "output": "MMMDCCCLXXXVIII"
   },
   {
-   "input": "s1",
-   "output": "s1"
+   "input": "2381",
+   "output": "MMCCCLXXXI"
   },
   {
-   "input": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L",
-   "output": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L"
+   "input": "3470",
+   "output": "MMMCDLXX"
   },
   {
-   "input": "Buz;f:kJac?mIynp  TcaiG1",
-   "output": "TcaiG1 Buz;f:kJac?mIynp"
+   "input": "798",
+   "output": "DCCXCVIII"
   },
   {
-   "input": "Q1(9WE)z",
-   "output": "Q1(9WE)z"
+   "input": "3721",
+   "output": "MMMDCCXXI"
   },
   {
-   "input": "zQF6d:cSc4!0,0\"l;sE:FcwfvH",
-   "output": "zQF6d:cSc4!0,0\"l;sE:FcwfvH"
+   "input": "3954",
+   "output": "MMMCMLIV"
   },
   {
-   "input": "0",
-   "output": "0"
+   "input": "2209",
+   "output": "MMCCIX"
   },
   {
-   "input": "IY.tK,hSWbBTkPRU",
-   "output": "IY.tK,hSWbBTkPRU"
+   "input": "3785",
+   "output": "MMMDCCLXXXV"
+  },
+  {
+   "input": "1470",
+   "output": "MCDLXX"
+  },
+  {
+   "input": "1914",
+   "output": "MCMXIV"
+  },
+  {
+   "input": "199",
+   "output": "CXCIX"
+  },
+  {
+   "input": "2718",
+   "output": "MMDCCXVIII"
+  },
+  {
+   "input": "2063",
+   "output": "MMLXIII"
   }
  ]
 }
