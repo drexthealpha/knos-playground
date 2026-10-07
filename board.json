@@ -7,6 +7,7 @@
   "9": "top-word",
   "10": "brackets",
   "11": "binary-add",
-  "12": "weekday"
+  "12": "weekday",
+  "13": "merge-intervals"
  }
 }
