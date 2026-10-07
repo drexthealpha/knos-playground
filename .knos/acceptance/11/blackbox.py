@@ -1,16 +1,28 @@
-"""Black-box acceptance for issue 11, made by `knos accept init`. Read README.md.
+"""Black-box acceptance for issue 11: the task "binary-add" of the Knos playground. Read README.md.
 
 This file runs as the judge, outside the pull request's tree, and never loads the pull request's code. It runs
-"$KNOS_RUN <command>" (which runs the command in the pull request's tree, inside the sandbox) on every input in
-cases.json, and compares what it prints with the answer recorded from the reference. Exit 0 means every case agrees."""
+"$KNOS_RUN <command>" (which runs the command in the pull request's tree, inside the sandbox) on every recorded input
+of cases.json, then on inputs gen.py makes from a seed drawn when this runs, and compares what the command prints with
+what reference.py answers. Exit 0 means every case agrees."""
+import importlib.util
 import json
 import os
+import random
 import subprocess
 import sys
 from pathlib import Path
 
-SPEC = json.loads((Path(__file__).resolve().parent / "cases.json").read_text(encoding="utf-8"))
+HERE = Path(__file__).resolve().parent
+SPEC = json.loads((HERE / "cases.json").read_text(encoding="utf-8"))
 SECONDS = 60
+sys.dont_write_bytecode = True
+
+
+def part(name):
+    spec = importlib.util.spec_from_file_location("knos_" + name, HERE / (name + ".py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def norm(text):
@@ -22,9 +34,15 @@ def ask(argv, stdin):
     return got.returncode, got.stdout, got.stderr
 
 
-def check(ask=ask):
-    """None when every case agrees, else one sentence about the first that does not."""
-    for n, case in enumerate(SPEC["cases"], 1):
+def fresh(seed):
+    """Cases nobody has seen: the generator's inputs at this seed, answered by the reference now."""
+    solve, known = part("reference").solve, {c["input"] for c in SPEC["cases"]}
+    return [{"input": line, "output": norm(solve(line + "\n"))} for line in dict.fromkeys(part("gen").inputs(random.Random(seed))) if line not in known]
+
+
+def check(ask=ask, seed=None):
+    """None when every case agrees, else one sentence about the first that does not. `seed` None: the recorded cases only."""
+    for n, case in enumerate(SPEC["cases"] + (fresh(seed) if seed is not None else []), 1):
         at = "case %d, the input %s" % (n, repr(case["input"][:60]))
         try:
             code, out, err = ask(SPEC["run"], (case["input"] + "\n").encode("utf-8"))
@@ -39,7 +57,8 @@ def check(ask=ask):
 
 
 if __name__ == "__main__":
-    why = check()
+    seed = int.from_bytes(os.urandom(8), "big")
+    why = check(seed=seed)
     if why:
-        sys.exit(why)
-    print("all %d cases agree" % len(SPEC["cases"]))
+        sys.exit("%s (fresh inputs: seed %d)" % (why, seed))
+    print("every recorded case and every fresh one (seed %d) agrees" % seed)

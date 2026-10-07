@@ -5,6 +5,7 @@
   "7": "rle",
   "8": "caesar",
   "9": "top-word",
-  "10": "brackets"
+  "10": "brackets",
+  "11": "binary-add"
  }
 }
