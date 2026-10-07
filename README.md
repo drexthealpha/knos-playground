@@ -14,6 +14,11 @@ The checks in `.knos/acceptance/<number>/` run your file as a separate process a
 answer matches, GitHub signs that it did and the escrow pays you: to the wallet you bound, or held for your account
 until you bind one. Nobody merges and nobody decides.
 
+**Take a funded task.** Issues labelled [`knos-funded`](https://github.com/drexthealpha/knos-playground/issues?q=is%3Aissue+is%3Aopen+label%3Aknos-funded)
+are small programming tasks, each with its own file under `tasks/`. Edit that file, try it with
+`python3 check.py <task>`, and open the pull request with `Closes #<the issue's number>`. A maintainer merges a pull
+request that passes the check, and the merge pays your account. Test USDC, no monetary value.
+
 The limits: an issue is funded only as it is opened, with at most 5 test USDC; one account funds at most 3
 in a day (UTC); the faucet serves this repository once a minute; issues 1 to 200 have checks. A first pull request
 from an account that is new to GitHub waits until a maintainer lets its check run.
