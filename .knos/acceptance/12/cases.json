@@ -1,96 +1,108 @@
 {
  "v": 1,
  "issue": 12,
+ "task": "weekday",
  "run": [
   "python3",
-  "words.py"
+  "tasks/weekday.py"
  ],
- "input": "text",
- "seed": 16,
+ "seed": 107,
  "cases": [
   {
-   "input": "",
-   "output": ""
+   "input": "2026-10-07",
+   "output": "Wednesday"
   },
   {
-   "input": " ",
-   "output": ""
+   "input": "2000-02-29",
+   "output": "Tuesday"
   },
   {
-   "input": "a",
-   "output": "a"
+   "input": "1900-03-01",
+   "output": "Thursday"
   },
   {
-   "input": "A",
-   "output": "A"
+   "input": "1900-01-01",
+   "output": "Monday"
   },
   {
-   "input": "Hello, World!",
-   "output": "World! Hello,"
+   "input": "1900-12-31",
+   "output": "Monday"
   },
   {
-   "input": "  leading and trailing  ",
-   "output": "trailing and leading"
+   "input": "2100-12-31",
+   "output": "Friday"
   },
   {
-   "input": "a  b",
-   "output": "b a"
+   "input": "2024-03-01",
+   "output": "Friday"
   },
   {
-   "input": "x-y_z",
-   "output": "x-y_z"
+   "input": "2023-03-01",
+   "output": "Wednesday"
   },
   {
-   "input": "100%",
-   "output": "100%"
+   "input": "2100-03-01",
+   "output": "Monday"
   },
   {
-   "input": "6iv9b4 b8p6/k csDZVe!fZ)O9,jDO",
-   "output": "csDZVe!fZ)O9,jDO b8p6/k 6iv9b4"
+   "input": "1999-12-31",
+   "output": "Friday"
   },
   {
-   "input": "ogY",
-   "output": "ogY"
+   "input": "1963-10-19",
+   "output": "Saturday"
   },
   {
-   "input": "_3lxl7ke&ttuA1",
-   "output": "_3lxl7ke&ttuA1"
+   "input": "2096-12-22",
+   "output": "Saturday"
   },
   {
-   "input": "ToZ",
-   "output": "ToZ"
+   "input": "2008-08-25",
+   "output": "Monday"
   },
   {
-   "input": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS",
-   "output": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS"
+   "input": "1979-03-14",
+   "output": "Wednesday"
   },
   {
-   "input": "s1",
-   "output": "s1"
+   "input": "2039-02-09",
+   "output": "Wednesday"
   },
   {
-   "input": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L",
-   "output": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L"
+   "input": "1975-10-02",
+   "output": "Thursday"
   },
   {
-   "input": "Buz;f:kJac?mIynp  TcaiG1",
-   "output": "TcaiG1 Buz;f:kJac?mIynp"
+   "input": "2081-11-09",
+   "output": "Sunday"
   },
   {
-   "input": "Q1(9WE)z",
-   "output": "Q1(9WE)z"
+   "input": "1980-04-06",
+   "output": "Sunday"
   },
   {
-   "input": "zQF6d:cSc4!0,0\"l;sE:FcwfvH",
-   "output": "zQF6d:cSc4!0,0\"l;sE:FcwfvH"
+   "input": "2050-04-05",
+   "output": "Tuesday"
   },
   {
-   "input": "0",
-   "output": "0"
+   "input": "2088-09-05",
+   "output": "Sunday"
   },
   {
-   "input": "IY.tK,hSWbBTkPRU",
-   "output": "IY.tK,hSWbBTkPRU"
+   "input": "1962-06-04",
+   "output": "Monday"
+  },
+  {
+   "input": "1919-03-03",
+   "output": "Monday"
+  },
+  {
+   "input": "2026-04-05",
+   "output": "Sunday"
+  },
+  {
+   "input": "2017-05-03",
+   "output": "Wednesday"
   }
  ]
 }
