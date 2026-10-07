@@ -7,4 +7,4 @@
 import sys
 
 words = sys.stdin.readline().split()
-print(" ".join(words))
+print(" ".join(words[::-1]).upper())
