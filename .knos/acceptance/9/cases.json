@@ -1,96 +1,100 @@
 {
  "v": 1,
  "issue": 9,
+ "task": "top-word",
  "run": [
   "python3",
-  "words.py"
+  "tasks/top_word.py"
  ],
- "input": "text",
- "seed": 16,
+ "seed": 104,
  "cases": [
   {
-   "input": "",
-   "output": ""
+   "input": "the cat and the hat",
+   "output": "the"
   },
   {
-   "input": " ",
-   "output": ""
-  },
-  {
-   "input": "a",
+   "input": "b a B A",
    "output": "a"
   },
   {
-   "input": "A",
-   "output": "A"
+   "input": "One",
+   "output": "one"
   },
   {
-   "input": "Hello, World!",
-   "output": "World! Hello,"
+   "input": "z y z y",
+   "output": "y"
   },
   {
-   "input": "  leading and trailing  ",
-   "output": "trailing and leading"
+   "input": "Kiwi kiwi fig",
+   "output": "kiwi"
   },
   {
-   "input": "a  b",
-   "output": "b a"
+   "input": "plum fig Apple",
+   "output": "apple"
   },
   {
-   "input": "x-y_z",
-   "output": "x-y_z"
+   "input": "Apple Apple",
+   "output": "apple"
   },
   {
-   "input": "100%",
-   "output": "100%"
+   "input": "FIG pear apple pear apple Pear apple Pear",
+   "output": "pear"
   },
   {
-   "input": "6iv9b4 b8p6/k csDZVe!fZ)O9,jDO",
-   "output": "csDZVe!fZ)O9,jDO b8p6/k 6iv9b4"
+   "input": "FIG FIG pear",
+   "output": "fig"
   },
   {
-   "input": "ogY",
-   "output": "ogY"
+   "input": "fig kiwi FIG apple fig",
+   "output": "fig"
   },
   {
-   "input": "_3lxl7ke&ttuA1",
-   "output": "_3lxl7ke&ttuA1"
+   "input": "pear plum plum Apple fig apple pear Pear",
+   "output": "pear"
   },
   {
-   "input": "ToZ",
-   "output": "ToZ"
+   "input": "Pear apple",
+   "output": "apple"
   },
   {
-   "input": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS",
-   "output": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS"
+   "input": "kiwi FIG Pear FIG Apple Pear",
+   "output": "fig"
   },
   {
-   "input": "s1",
-   "output": "s1"
+   "input": "plum plum",
+   "output": "plum"
   },
   {
-   "input": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L",
-   "output": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L"
+   "input": "Apple apple apple apple",
+   "output": "apple"
   },
   {
-   "input": "Buz;f:kJac?mIynp  TcaiG1",
-   "output": "TcaiG1 Buz;f:kJac?mIynp"
+   "input": "kiwi pear",
+   "output": "kiwi"
   },
   {
-   "input": "Q1(9WE)z",
-   "output": "Q1(9WE)z"
+   "input": "plum apple Apple plum",
+   "output": "apple"
   },
   {
-   "input": "zQF6d:cSc4!0,0\"l;sE:FcwfvH",
-   "output": "zQF6d:cSc4!0,0\"l;sE:FcwfvH"
+   "input": "pear apple Pear",
+   "output": "pear"
   },
   {
-   "input": "0",
-   "output": "0"
+   "input": "apple Apple",
+   "output": "apple"
   },
   {
-   "input": "IY.tK,hSWbBTkPRU",
-   "output": "IY.tK,hSWbBTkPRU"
+   "input": "Pear plum kiwi",
+   "output": "kiwi"
+  },
+  {
+   "input": "Apple kiwi fig pear pear plum pear pear fig",
+   "output": "pear"
+  },
+  {
+   "input": "Apple plum",
+   "output": "apple"
   }
  ]
 }
