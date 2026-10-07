@@ -1,20 +1,24 @@
-# .github/workflows/knos-faucet.yml: the test USDC faucet of the playground, and nothing else.
-#
-# It is the `faucet` job of drexthealpha/Knos's .github/workflows/worker.yml, copied as a file of its own, so that the
-# playground runs the faucet without the worker's relay job (which would start a second chain of relay runs here).
-# `/knos faucet <address | passkey>` on the issue labelled `faucet` gives 20 test USDC, which has no monetary value
-# (https://github.com/drexthealpha/Knos/blob/main/docs/FAUCET.md). It checks out Knos's own code and runs
-# `python -m knos.faucet`; nothing of a pull request runs here. Secrets: KNOS_FAUCET_KEY (holds test USDC only) and
-# KNOS_WORKER_KEY (the relay's key: pays the fee), read by this job only.
+# .github/workflows/knos-faucet.yml: the test USDC faucet of this repository, and nothing else.
+# Written by scripts/small_repos.py of drexthealpha/Knos: the `faucet` job below is that repository's
+# .github/workflows/worker.yml job of the same name, byte for byte, so a rebuild of this repository keeps it.
+# It answers `/knos faucet <address>` on the issue labelled `faucet` with a fixed amount of test USDC, which has no
+# monetary value (docs/FAUCET.md there has every rule). Secrets: KNOS_FAUCET_KEY (holds test USDC, no SOL) and
+# KNOS_RELAY_KEY (pays the fee). Without both it says so and ends green. No relay runs here.
 name: knos faucet
-
+run-name: faucet for a comment
 on:
   issue_comment:
     types: [created]
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
+  # The faucet: one comment, one answer. Nothing of the comment reaches a shell: knos.faucet reads the event's file as
+  # data, and nothing the requester wrote but a base58 address reaches its reply. The code is Knos's, wherever this file
+  # runs: the checkout names the repository, at the ref the variable KNOS_FAUCET_REF names (default: main, the code the
+  # relay job of this file runs). The install is by hash (requirements/faucet.txt: what the relay installs, and the
+  # memory engine the journal is kept in); no cache of any kind.
   faucet:
     if: >-
       github.event_name == 'issue_comment' && github.repository == (vars.KNOS_FAUCET_REPO || 'drexthealpha/knos-playground')
