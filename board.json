@@ -2,6 +2,7 @@
  "v": 1,
  "tasks": {
   "6": "roman",
-  "7": "rle"
+  "7": "rle",
+  "8": "caesar"
  }
 }
