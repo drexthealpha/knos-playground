@@ -1,96 +1,108 @@
 {
  "v": 1,
  "issue": 10,
+ "task": "brackets",
  "run": [
   "python3",
-  "words.py"
+  "tasks/brackets.py"
  ],
- "input": "text",
- "seed": 16,
+ "seed": 105,
  "cases": [
   {
+   "input": "(a[b]{c})",
+   "output": "yes"
+  },
+  {
+   "input": "(]",
+   "output": "no"
+  },
+  {
+   "input": "(()",
+   "output": "no"
+  },
+  {
    "input": "",
-   "output": ""
+   "output": "yes"
   },
   {
-   "input": " ",
-   "output": ""
+   "input": ")(",
+   "output": "no"
   },
   {
-   "input": "a",
-   "output": "a"
+   "input": "([)]",
+   "output": "no"
   },
   {
-   "input": "A",
-   "output": "A"
+   "input": "{[()]}",
+   "output": "yes"
   },
   {
-   "input": "Hello, World!",
-   "output": "World! Hello,"
+   "input": "((",
+   "output": "no"
   },
   {
-   "input": "  leading and trailing  ",
-   "output": "trailing and leading"
+   "input": "a(b)c]",
+   "output": "no"
   },
   {
-   "input": "a  b",
-   "output": "b a"
+   "input": "[(])",
+   "output": "no"
   },
   {
-   "input": "x-y_z",
-   "output": "x-y_z"
+   "input": "{}{}[",
+   "output": "no"
   },
   {
-   "input": "100%",
-   "output": "100%"
+   "input": "x",
+   "output": "yes"
   },
   {
-   "input": "6iv9b4 b8p6/k csDZVe!fZ)O9,jDO",
-   "output": "csDZVe!fZ)O9,jDO b8p6/k 6iv9b4"
+   "input": "[{(([{",
+   "output": "no"
   },
   {
-   "input": "ogY",
-   "output": "ogY"
+   "input": "{[[)[))(",
+   "output": "no"
   },
   {
-   "input": "_3lxl7ke&ttuA1",
-   "output": "_3lxl7ke&ttuA1"
+   "input": "][)]{]]",
+   "output": "no"
   },
   {
-   "input": "ToZ",
-   "output": "ToZ"
+   "input": "})}){",
+   "output": "no"
   },
   {
-   "input": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS",
-   "output": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS"
+   "input": "{[([",
+   "output": "no"
   },
   {
-   "input": "s1",
-   "output": "s1"
+   "input": "{([}})}]",
+   "output": "no"
   },
   {
-   "input": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L",
-   "output": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L"
+   "input": "{{}}]{",
+   "output": "no"
   },
   {
-   "input": "Buz;f:kJac?mIynp  TcaiG1",
-   "output": "TcaiG1 Buz;f:kJac?mIynp"
+   "input": "]{[{}(",
+   "output": "no"
   },
   {
-   "input": "Q1(9WE)z",
-   "output": "Q1(9WE)z"
+   "input": "([])",
+   "output": "yes"
   },
   {
-   "input": "zQF6d:cSc4!0,0\"l;sE:FcwfvH",
-   "output": "zQF6d:cSc4!0,0\"l;sE:FcwfvH"
+   "input": "((([])))",
+   "output": "yes"
   },
   {
-   "input": "0",
-   "output": "0"
+   "input": "([{",
+   "output": "no"
   },
   {
-   "input": "IY.tK,hSWbBTkPRU",
-   "output": "IY.tK,hSWbBTkPRU"
+   "input": "}])",
+   "output": "no"
   }
  ]
 }
