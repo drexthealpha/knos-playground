@@ -1,96 +1,112 @@
 {
  "v": 1,
  "issue": 21,
+ "task": "luhn",
  "run": [
   "python3",
-  "words.py"
+  "tasks/luhn.py"
  ],
- "input": "text",
- "seed": 16,
+ "seed": 111,
  "cases": [
   {
-   "input": "",
-   "output": ""
+   "input": "79927398713",
+   "output": "valid"
   },
   {
-   "input": " ",
-   "output": ""
-  },
-  {
-   "input": "a",
-   "output": "a"
-  },
-  {
-   "input": "A",
-   "output": "A"
-  },
-  {
-   "input": "Hello, World!",
-   "output": "World! Hello,"
-  },
-  {
-   "input": "  leading and trailing  ",
-   "output": "trailing and leading"
-  },
-  {
-   "input": "a  b",
-   "output": "b a"
-  },
-  {
-   "input": "x-y_z",
-   "output": "x-y_z"
-  },
-  {
-   "input": "100%",
-   "output": "100%"
-  },
-  {
-   "input": "6iv9b4 b8p6/k csDZVe!fZ)O9,jDO",
-   "output": "csDZVe!fZ)O9,jDO b8p6/k 6iv9b4"
-  },
-  {
-   "input": "ogY",
-   "output": "ogY"
-  },
-  {
-   "input": "_3lxl7ke&ttuA1",
-   "output": "_3lxl7ke&ttuA1"
-  },
-  {
-   "input": "ToZ",
-   "output": "ToZ"
-  },
-  {
-   "input": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS",
-   "output": "Hp/X(yT4V3cSykBX0h\"B0?Rf.ZS"
-  },
-  {
-   "input": "s1",
-   "output": "s1"
-  },
-  {
-   "input": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L",
-   "output": "cpoQZI5LBIb8azk1t\"CR0&nIbOvV1\"L"
-  },
-  {
-   "input": "Buz;f:kJac?mIynp  TcaiG1",
-   "output": "TcaiG1 Buz;f:kJac?mIynp"
-  },
-  {
-   "input": "Q1(9WE)z",
-   "output": "Q1(9WE)z"
-  },
-  {
-   "input": "zQF6d:cSc4!0,0\"l;sE:FcwfvH",
-   "output": "zQF6d:cSc4!0,0\"l;sE:FcwfvH"
+   "input": "79927398710",
+   "output": "invalid"
   },
   {
    "input": "0",
-   "output": "0"
+   "output": "valid"
   },
   {
-   "input": "IY.tK,hSWbBTkPRU",
-   "output": "IY.tK,hSWbBTkPRU"
+   "input": "18",
+   "output": "valid"
+  },
+  {
+   "input": "59",
+   "output": "valid"
+  },
+  {
+   "input": "4539578763621486",
+   "output": "valid"
+  },
+  {
+   "input": "1234567812345678",
+   "output": "invalid"
+  },
+  {
+   "input": "00",
+   "output": "valid"
+  },
+  {
+   "input": "91",
+   "output": "valid"
+  },
+  {
+   "input": "357366923683274",
+   "output": "valid"
+  },
+  {
+   "input": "64635709",
+   "output": "valid"
+  },
+  {
+   "input": "3976164",
+   "output": "valid"
+  },
+  {
+   "input": "81415735380067",
+   "output": "valid"
+  },
+  {
+   "input": "847778192025",
+   "output": "valid"
+  },
+  {
+   "input": "789053725",
+   "output": "valid"
+  },
+  {
+   "input": "2986997099322894",
+   "output": "valid"
+  },
+  {
+   "input": "4507051916534",
+   "output": "valid"
+  },
+  {
+   "input": "3997186631441",
+   "output": "invalid"
+  },
+  {
+   "input": "23177400",
+   "output": "invalid"
+  },
+  {
+   "input": "36910",
+   "output": "invalid"
+  },
+  {
+   "input": "85",
+   "output": "invalid"
+  },
+  {
+   "input": "539845",
+   "output": "invalid"
+  },
+  {
+   "input": "6549",
+   "output": "invalid"
+  },
+  {
+   "input": "2689596168",
+   "output": "invalid"
+  },
+  {
+   "input": "98410",
+   "output": "invalid"
   }
  ]
 }
