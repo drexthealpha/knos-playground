@@ -21,6 +21,7 @@
   "23": "outside-gate",
   "24": "outside-keyholder",
   "25": "outside-tamper",
-  "26": "outside-witness"
+  "26": "outside-witness",
+  "27": "outside-reproduce"
  }
 }
