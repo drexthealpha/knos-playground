@@ -19,6 +19,7 @@
   "21": "luhn",
   "22": "outside-compose",
   "23": "outside-gate",
-  "24": "outside-keyholder"
+  "24": "outside-keyholder",
+  "25": "outside-tamper"
  }
 }
