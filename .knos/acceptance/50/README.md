@@ -12,4 +12,4 @@ merge, when this folder is on the default branch before the bounty is funded: `/
 What it does not do: the cases are in this repository, so an implementation can answer exactly them from a table. More
 cases make that more work, not impossible. A check that generates its inputs when it runs and compares them with a
 reference at that time cannot be answered from a table: write that as `blackbox.py` yourself if the bounty is worth it
-(Knos's docs/TAMPER.md measures the difference).
+(Knos's docs/reference/TAMPER.md measures the difference).

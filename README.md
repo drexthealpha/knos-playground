@@ -24,6 +24,6 @@ in a day (UTC); the faucet serves this repository once a minute; issues 1 to 200
 from an account that is new to GitHub waits until a maintainer lets its check run.
 
 It is test money: the faucet mints it, nobody can withdraw it from the faucet's balance, and it is worth nothing.
-What is counted, and how: [docs/PLAYGROUND.md](https://github.com/drexthealpha/Knos/blob/main/docs/PLAYGROUND.md).
+What is counted, and how: [docs/reference/PLAYGROUND.md](https://github.com/drexthealpha/Knos/blob/main/docs/reference/PLAYGROUND.md).
 
 On Solana devnet today, in test USDC.
